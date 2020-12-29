@@ -1,8 +1,10 @@
 from flask import Flask
+from flask_cors import CORS
 import requests
 import os
 
 app = Flask(__name__)
+CORS(app)
 
 API_KEY = os.getenv("API_KEY", default="None")
 
