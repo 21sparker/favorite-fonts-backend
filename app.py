@@ -14,7 +14,7 @@ def index():
 
 @app.route('/getdata', methods=['GET'])
 def get_api_data():
-    r = requests.get(f"https://www.googleapis.com/webfonts/v1/webfonts?key={API_KEY}")
+    r = requests.get(f"https://www.googleapis.com/webfonts/v1/webfonts?key={API_KEY}&sort=popularity")
     return r.json()
 
 if __name__ == '__main__':
